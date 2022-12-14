@@ -9,29 +9,58 @@
         <div id="top-panel">
             <div>
                 <label>名字: </label>
-                <input type="text" id="name" placeholder="Name"/>
+                <input type="text" id="name" placeholder="Name" />
 
                 <label>地點: </label>
-                <input type="text" id="place" placeholder="Block D or LY"/>
+                <input type="text" id="place" placeholder="Block D or LY" />
             </div>
 
             <div>
                 <label>時間: </label>
 
-                <input type="radio" name="time" id="time1" value="7pm" />
+                <input
+                    type="radio"
+                    name="time"
+                    id="time1"
+                    value="7pm"
+                    onclick="disableTextField()"
+                />
                 <label>7pm</label>
 
-                <input type="radio" name="time" id="time2" value="9pm" />
+                <input
+                    type="radio"
+                    name="time"
+                    id="time2"
+                    value="9pm"
+                    onclick="disableTextField()"
+                />
                 <label>9pm</label>
 
-                <input type="radio" name="time" id="time3" value="11pm" />
+                <input
+                    type="radio"
+                    name="time"
+                    id="time3"
+                    value="11pm"
+                    onclick="disableTextField()"
+                />
                 <label>11pm</label>
 
-                <input type="radio" name="time" id="time4" value="12.30am" />
+                <input
+                    type="radio"
+                    name="time"
+                    id="time4"
+                    value="12.30am"
+                    onclick="disableTextField()"
+                />
                 <label>12.30am</label>
 
-                <input type="radio" name="time" id="time5" />
-                <input type="text" id="time6" placeholder="自定時間" />
+                <input
+                    type="radio"
+                    name="time"
+                    id="time5"
+                    onclick="enableTextField()"
+                />
+                <input type="text" id="time6" placeholder="自定時間" disabled/>
             </div>
         </div>
 

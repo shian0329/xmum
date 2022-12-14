@@ -651,3 +651,11 @@ function reset() {
     document.getElementById("redTS").checked = false;
     document.getElementById("redTSQ").value = "";
 }
+
+function disableTextField() {
+    document.getElementById('time6').disabled= true
+}
+
+function enableTextField() {
+    document.getElementById('time6').disabled= false
+}
