@@ -106,483 +106,453 @@ function validation() {
         finalOutput += "\n\t時間: " + time6.value;
     }
 
-    finalOutput += "\n";
-
-    var setDiscount = 0;
-    var amount = 0;
-    var quantity = 0;
-    var totalAmount = 0;
+    var totalPrice = 0;
+    var categoryA = 0; // for chicken and pork
+    var categoryB = 0; // for beef and prawn
 
     if (chickenA.checked && chickenAQ != "" && chickenAQ != 0) {
-        amount = chickenAQ.value;
-        quantity = chickenAQ.value;
+        let word = chickenA.value
+        let amount = chickenAQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryA += amount * 1.0;
+
+        if (categoryA < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryA >= 10) {
+            let count = categoryA
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryA -= price * 10;
+            price *= 15
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
-
-        quantity = quantity * 1.7 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            chickenA.value +
-            "x" +
-            chickenAQ.value +
-            "\t" +
-            quantity +
-            "\n";
     }
+
     if (chickenB.checked && chickenBQ != "" && chickenBQ != 0) {
-        amount = chickenBQ.value;
-        quantity = chickenBQ.value;
+        let word = chickenB.value
+        let amount = chickenBQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryA += amount * 1.0;
+
+        if (categoryA < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryA >= 10) {
+            let count = categoryA;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryA -= price * 10;
+            price *= 15
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
-
-        quantity = quantity * 1.7 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            chickenB.value +
-            "x" +
-            chickenBQ.value +
-            "\t" +
-            quantity +
-            "\n";
     }
+
     if (chickenC.checked && chickenCQ != "" && chickenCQ != 0) {
-        amount = chickenCQ.value;
-        quantity = chickenCQ.value;
+        let word = chickenC.value
+        let amount = chickenCQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryA += amount * 1.0;
+
+        if (categoryA < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryA >= 10) {
+            let count = categoryA;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryA -= price * 10;
+            price *= 15
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
-
-        quantity = quantity * 1.7 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            chickenC.value +
-            "x" +
-            chickenCQ.value +
-            "\t" +
-            quantity +
-            "\n";
     }
 
     if (porkA.checked && porkAQ.value != "" && porkAQ.value != 0) {
-        amount = porkAQ.value;
-        quantity = porkAQ.value;
+        let word = porkA.value
+        let amount = porkAQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryA += amount * 1.0;
+
+        if (categoryA < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryA >= 10) {
+            let count = categoryA;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryA -= price * 10;
+            price *= 15
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
-
-        quantity = quantity * 1.7 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            porkA.value +
-            "x" +
-            porkAQ.value +
-            "\t" +
-            quantity +
-            "\n";
     }
+
     if (porkB.checked && porkBQ.value != "" && porkBQ.value != 0) {
-        amount = porkBQ.value;
-        quantity = porkBQ.value;
+        let word = porkB.value
+        let amount = porkBQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryA += amount * 1.0;
+
+        if (categoryA < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryA >= 10) {
+            let count = categoryA;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryA -= price * 10;
+            price *= 15
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
-
-        quantity = quantity * 1.7 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            porkB.value +
-            "x" +
-            porkBQ.value +
-            "\t" +
-            quantity +
-            "\n";
     }
+
     if (porkC.checked && porkCQ.value != "" && porkCQ.value != 0) {
-        amount = porkCQ.value;
-        quantity = porkCQ.value;
+        let word = porkC.value
+        let amount = porkCQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryA += amount * 1.0;
+
+        if (categoryA < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryA >= 10) {
+            let count = categoryA;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryA -= price * 10;
+            price *= 15
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
+    }
 
-        quantity = quantity * 1.7 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            porkC.value +
-            "x" +
-            porkCQ.value +
-            "\t" +
-            quantity +
-            "\n";
+    if (categoryA < 10 && categoryA != 0) {
+        categoryA *= 1.7
+        totalPrice += categoryA;
+        finalOutput += "\n\t\t\t" + categoryA
     }
 
     if (beefA.checked && beefAQ.value != "" && beefAQ.value != 0) {
-        amount = beefAQ.value;
-        quantity = beefAQ.value;
+        let word = beefA.value
+        let amount = beefAQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryB += amount * 1.0;
+
+        if (categoryB < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryB >= 10) {
+            let count = categoryB;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryB -= price * 10;
+            price *= 18
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
-
-        quantity = quantity * 2.0 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            beefA.value +
-            "x" +
-            beefAQ.value +
-            "\t" +
-            quantity +
-            "\n";
     }
+
     if (beefB.checked && beefBQ.value != "" && beefBQ.value != 0) {
-        amount = beefBQ.value;
-        quantity = beefBQ.value;
+        let word = beefB.value
+        let amount = beefBQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryB += amount * 1.0;
+
+        if (categoryB < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryB >= 10) {
+            let count = categoryB;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryB -= price * 10;
+            price *= 18
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
         }
-
-        quantity = quantity * 2.0 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            beefB.value +
-            "x" +
-            beefBQ.value +
-            "\t" +
-            quantity +
-            "\n";
     }
+
     if (beefC.checked && beefCQ.value != "" && beefCQ.value != 0) {
-        amount = beefCQ.value;
-        quantity = beefCQ.value;
+        let word = beefC.value
+        let amount = beefCQ.value
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+        categoryB += amount * 1.0;
+
+        if (categoryB < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryB >= 10) {
+            let count = categoryB;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
             }
-        } else {
-            setDiscount = 0
+
+            categoryB -= price * 10;
+            price *= 18
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
+        }
+    }
+
+    if (prawnA.checked && prawnAQ.value != "" && prawnAQ.value != 0) {
+        let word = prawnA.value
+        let amount = prawnAQ.value
+
+        categoryB += amount * 1.0;
+
+        if (categoryB < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryB >= 10) {
+            let count = categoryB;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
+            }
+
+            categoryB -= price * 10;
+            price *= 18
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
+        }
+    }
+
+    if (prawnB.checked && prawnBQ.value != "" && prawnBQ.value != 0) {
+        let word = prawnB.value
+        let amount = prawnBQ.value
+
+        categoryB += amount * 1.0;
+
+        if (categoryB < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryB >= 10) {
+            let count = categoryB;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
+            }
+
+            categoryB -= price * 10;
+            price *= 18
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
+        }
+    }
+    if (prawnC.checked && prawnCQ.value != "" && prawnCQ.value != 0
+    ) {
+        let word = prawnC.value
+        let amount = prawnCQ.value
+
+        categoryB += amount * 1.0;
+
+        if (categoryB < 10) {
+            finalOutput += "\n\t\t" + word + "x" + amount
+        } else if (categoryB >= 10) {
+            let count = categoryB;
+            let price = 0
+
+            if (count >= 10) {
+                while (count != 0) {
+                    price = count;
+                    count = Math.floor(count / 10);
+                }
+            }
+
+            categoryB -= price * 10;
+            price *= 18
+
+            finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price
+
+            totalPrice += price;
+        }
+    }
+
+    if (categoryB < 10 && categoryB != 0) {
+        categoryB *= 2
+        totalPrice += categoryB;
+        finalOutput += "\n\t\t\t" + categoryB
+    }
+
+    if (scallopA.checked && scallopAQ.value != "" && scallopAQ.value != 0
+    ) {
+        let word = scallopA.value
+        let amount = scallopAQ.value
+        let count = amount
+        let discount = 0
+
+        if (count >= 10) {
+            while (count != 0) {
+                discount = count;
+                count = Math.floor(count / 10);
+                discount *= 1;
+            }
         }
 
-        quantity = quantity * 2.0 - setDiscount;
-        totalAmount += quantity;
+        let price = amount * 1.4 - discount;
+        totalPrice += price;
 
-        finalOutput +=
-            "\t\t" +
-            beefC.value +
-            "x" +
-            beefCQ.value +
-            "\t" +
-            quantity +
-            "\n";
+        finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price;
     }
-
-    if (
-        prawnA.checked &&
-        prawnAQ.value != "" &&
-        prawnAQ.value != 0
+    if (scallopB.checked && scallopBQ.value != "" && scallopBQ.value != 0
     ) {
-        amount = prawnAQ.value;
-        quantity = prawnAQ.value;
+        let word = scallopA.value
+        let amount = scallopAQ.value
+        let count = amount
+        let discount = 0
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
+        if (count >= 10) {
+            while (count != 0) {
+                discount = amount;
                 amount = Math.floor(amount / 10);
-                setDiscount *= 2;
+                discount *= 1;
             }
-        } else {
-            setDiscount = 0
         }
 
-        quantity = quantity * 2.0 - setDiscount;
-        totalAmount += quantity;
+        let price = amount * 1.4 - discount;
+        totalPrice += price;
 
-        finalOutput +=
-            "\t\t" +
-            prawnA.value +
-            "x" +
-            prawnAQ.value +
-            "\t" +
-            quantity +
-            "\n";
-    }
-    if (
-        prawnB.checked &&
-        prawnBQ.value != "" &&
-        prawnBQ.value != 0
-    ) {
-        amount = prawnBQ.value;
-        quantity = prawnBQ.value;
-
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
-            }
-        } else {
-            setDiscount = 0
-        }
-
-        quantity = quantity * 2.0 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            prawnB.value +
-            "x" +
-            prawnBQ.value +
-            "\t" +
-            quantity +
-            "\n";
-    }
-    if (
-        prawnC.checked &&
-        prawnCQ.value != "" &&
-        prawnCQ.value != 0
-    ) {
-        amount = prawnCQ.value;
-        quantity = prawnCQ.value;
-
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 2;
-            }
-        } else {
-            setDiscount = 0
-        }
-
-        quantity = quantity * 2.0 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            prawnC.value +
-            "x" +
-            prawnCQ.value +
-            "\t" +
-            quantity +
-            "\n";
+        finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price;
     }
 
-    if (
-        scallopA.checked &&
-        scallopAQ.value != "" &&
-        scallopAQ.value != 0
+    if (solenStrictusA.checked && solenStrictusAQ.value != "" && solenStrictusAQ.value != 0
     ) {
-        amount = scallopAQ.value;
-        quantity = scallopAQ.value;
+        let price = solenStrictusAQ.value * 8
+        totalPrice += price;
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 1;
-            }
-        } else {
-            setDiscount = 0
-        }
-
-        quantity = quantity * 1.4 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" + scallopA.value + "x" + scallopAQ.value + "\t" +
-            quantity + "\n";
+        finalOutput += "\n\t\t" + solenStrictusA.value + "x" + solenStrictusAQ.value + "\t" + price;
     }
-    if (
-        scallopB.checked &&
-        scallopBQ.value != "" &&
-        scallopBQ.value != 0
+    if (solenStrictusB.checked && solenStrictusBQ.value != "" && solenStrictusBQ.value != 0
     ) {
-        amount = scallopBQ.value;
-        quantity = scallopBQ.value;
+        let price = solenStrictusBQ.value * 8
+        totalPrice += price;
 
-        if (amount >= 10) {
-            while (amount != 0) {
-                setDiscount = amount;
-                amount = Math.floor(amount / 10);
-                setDiscount *= 1;
-            }
-        } else {
-            setDiscount = 0
-        }
-
-        quantity = quantity * 1.4 - setDiscount;
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" + scallopB.value + "x" + scallopBQ.value + "\t" +
-            quantity + "\n";
+        finalOutput += "\n\t\t" + solenStrictusB.value + "x" + solenStrictusBQ.value + "\t" + price;
     }
 
-    if (
-        solenStrictusA.checked &&
-        solenStrictusAQ.value != "" &&
-        solenStrictusAQ.value != 0
+    if (oysterA.checked && oysterAQ.value != "" && oysterAQ.value != 0
     ) {
-        quantity = solenStrictusAQ.value * 8
-        totalAmount += quantity;
+        let price = Math.ceil(oysterAQ.value * 13.33)
+        totalPrice += price;
 
-        finalOutput +=
-            "\t\t" +
-            solenStrictusA.value +
-            "x" +
-            solenStrictusAQ.value + "\t" +
-            quantity
-            + "\n";
-    }
-    if (
-        solenStrictusB.checked &&
-        solenStrictusBQ.value != "" &&
-        solenStrictusBQ.value != 0
-    ) {
-        quantity = solenStrictusBQ.value * 8
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" +
-            solenStrictusB.value +
-            "x" +
-            solenStrictusBQ.value + "\t" +
-            quantity
-            + "\n";
+        finalOutput += "\n\t\t" + oysterA.value + "x" + oysterAQ.value + "\t" + price;
     }
 
-    if (
-        oysterA.checked &&
-        oysterAQ.value != "" &&
-        oysterAQ.value != 0
+    if (greenTB.checked && greenTBQ.value != "" && greenTBQ.value != 0
     ) {
-        quantity = Math.ceil(oysterAQ.value * 13.33)
-        totalAmount += quantity;
+        let price = greenTBQ.value * 7
+        totalPrice += price;
 
-        finalOutput +=
-            "\t\t" + oysterA.value + "x" + oysterAQ.value + "\t" +
-            quantity + "\n";
+        finalOutput += "\n\t\t" + greenTB.value + "x" + greenTBQ.value + "\t" + price;
     }
 
-    if (
-        greenTB.checked &&
-        greenTBQ.value != "" &&
-        greenTBQ.value != 0
+    if (greenTS.checked && greenTSQ.value != "" && greenTSQ.value != 0
     ) {
-        quantity = greenTBQ.value * 7
-        totalAmount += quantity;
+        let price = greenTSQ.value * 5
+        totalPrice += price;
 
-        finalOutput +=
-            "\t\t" + greenTB.value + "x" + greenTBQ.value + "\t" +
-            quantity + "\n";
-    }
-
-    if (
-        greenTS.checked &&
-        greenTSQ.value != "" &&
-        greenTSQ.value != 0
-    ) {
-        quantity = greenTSQ.value * 5
-        totalAmount += quantity;
-
-        finalOutput +=
-            "\t\t" + greenTS.value + "x" + greenTSQ.value + "\t" +
-            quantity + "\n";
+        finalOutput += "\n\t\t" + greenTS.value + "x" + greenTSQ.value + "\t" + price;
     }
 
     if (redTB.checked && redTBQ.value != "" && redTBQ.value != 0) {
-        quantity = redTBQ.value * 7
-        totalAmount += quantity;
+        let price = redTBQ.value * 7
+        totalPrice += price;
 
-        finalOutput +=
-            "\t\t" + redTB.value + "x" + redTBQ.value + "\t" +
-            quantity + "\n";
+        finalOutput += "\n\t\t" + redTB.value + "x" + redTBQ.value + "\t" + price;
     }
 
     if (redTS.checked && redTSQ.value != "" && redTSQ.value != 0) {
-        quantity = redTSQ.value * 5
-        totalAmount += quantity;
+        let price = redTSQ.value * 5
+        totalPrice += price;
 
-        finalOutput +=
-            "\t\t" + redTS.value + "x" + redTSQ.value + "\t" +
-            quantity + "\n";
+        finalOutput += "\n\t\t" + redTS.value + "x" + redTSQ.value + "\t" + price;
     }
 
-    finalOutput += "\t\t\tRM " + parseFloat(totalAmount).toFixed(2);
+    finalOutput += "\n\t\t\tRM " + parseFloat(totalPrice).toFixed(2);
 
     if (paymentMethod1.checked) {
         finalOutput += "\t" + paymentMethod1.value;
