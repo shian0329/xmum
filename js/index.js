@@ -545,7 +545,7 @@ function validation() {
         finalOutput += "\n\t\t" + redTS.value + "x" + redTSQ.value + "\t" + price;
     }
 
-    if (time3.value != '') {
+    if (time3.checked && time4.value != '') {
         totalPrice += 3;
     }
 
