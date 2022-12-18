@@ -7,6 +7,14 @@ function handleForm(event) {
     validation()
 }
 
+function disableTextField() {
+    document.getElementById('time4').disabled = true
+}
+
+function enableTextField() {
+    document.getElementById('time4').disabled = false
+}
+
 function validation() {
     // check time
     var time1 = document.getElementById("time1");
@@ -556,10 +564,3 @@ function copy(finalOutput) {
     document.getElementById("text").style.display = "none";
 }
 
-function disableTextField() {
-    document.getElementById('time4').disabled = true
-}
-
-function enableTextField() {
-    document.getElementById('time4').disabled = false
-}
