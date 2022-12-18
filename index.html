@@ -12,71 +12,56 @@
                     <label>名字: </label>
                     <input type="text" id="name" placeholder="Name" required/>
 
-                    <label>地點: </label>
-                    <input type="text" id="place" placeholder="Block D or LY" required/>
-                </div>
-
-                <div>
                     <label>時間: </label>
 
-                    <input
-                        type="radio"
-                        name="time"
-                        id="time1"
-                        value="7pm"
-                        onclick="disableTextField()"
-                    />
-                    <label>7pm</label>
-
-                    <input
-                        type="radio"
-                        name="time"
-                        id="time2"
-                        value="9pm"
-                        onclick="disableTextField()"
-                    />
-                    <label>9pm</label>
-
+                    <input type="radio" name="time" onclick="disableTextField()" id="time1" checked>
+                    <select name="time" id="time2">
+                        <option value="7pm">7pm</option>
+                        <option value="9pm">9pm</option>
+                        <option value="11pm">11pm</option>
+                        <option value="12.30am">12.30am</option>
+                    </select>
+                    
                     <input
                         type="radio"
                         name="time"
                         id="time3"
-                        value="11pm"
-                        onclick="disableTextField()"
-                    />
-                    <label>11pm</label>
-
-                    <input
-                        type="radio"
-                        name="time"
-                        id="time4"
-                        value="12.30am"
-                        onclick="disableTextField()"
-                    />
-                    <label>12.30am</label>
-
-                    <input
-                        type="radio"
-                        name="time"
-                        id="time5"
                         onclick="enableTextField()"
                     />
                     <input
                         type="text"
-                        id="time6"
+                        id="time4"
                         placeholder="自定時間"
                         disabled
+                        style="width: 55px;"
                     />
                 </div>
 
                 <div>
+                    <label>地點: </label>
+                    <select name="place" id="place">
+                        <option value="D1">D1</option>
+                        <option value="D2">D2</option>
+                        <option value="D3">D3</option>
+                        <option value="D4">D4</option>
+                        <option value="D5">D5</option>
+                        <option value="D6">D6</option>
+                        <option value="LY1">LY1</option>
+                        <option value="LY2">LY2</option>
+                        <option value="LY3">LY3</option>
+                        <option value="LY4">LY4</option>
+                        <option value="LY5">LY5</option>
+                        <option value="LY9">LY9</option>
+                        <option value="BellSuite">BellSuite</option>
+                    </select>
+
                     <label>付款: </label>
 
-                    <input type="radio" name="paymentMethod" id="paymentMethod1" value="tng">
-                    <label>Tng</label>
-                    
-                    <input type="radio" name="paymentMethod" id="paymentMethod2" value="cash">
-                    <label>Cash</label>
+                    <select name="paymentMethod" id="paymentMethod">
+                        <option value="Tng">Tng</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Bank">Bank</option>
+                    </select>
                 </div>
             </div>
 
@@ -229,7 +214,7 @@
 
                 <div id="box-padding">
                     <div id="box">
-                        扇貝
+                        扇貝 (5/小, 10/大)
                         <div>
                             <input
                                 type="checkbox"
@@ -238,7 +223,7 @@
                             />
                             <label>蒜蓉貝殼&nbsp;&nbsp;&nbsp;</label>
                             <input type="number" min="0"" style="width: 50px"
-                            id="scallopAQ" placeholder="粒"/>
+                            id="scallopAQ" placeholder="粒" step="5"/>
                         </div>
 
                         <div>
@@ -249,7 +234,7 @@
                             />
                             <label>粉絲麻辣燙</label>
                             <input type="number" min="0"" style="width: 50px"
-                            id="scallopBQ" placeholder="粒"/>
+                            id="scallopBQ" placeholder="粒" step="5"/>
                         </div>
                     </div>
 

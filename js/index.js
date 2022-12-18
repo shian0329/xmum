@@ -13,24 +13,15 @@ function validation() {
     var time2 = document.getElementById("time2");
     var time3 = document.getElementById("time3");
     var time4 = document.getElementById("time4");
-    var time5 = document.getElementById("time5");
-    var time6 = document.getElementById("time6");
 
-    if (!(time1.checked == true || time2.checked == true || time3.checked == true
-        || time4.checked == true || (time5.checked == true && time6.value != ""))
+    if (!(time1.checked == true || (time3.checked == true && time4.value != ''))
     ) {
         alert("Time is required!")
         return false
     }
 
     // check payment method
-    var paymentMethod1 = document.getElementById("paymentMethod1")
-    var paymentMethod2 = document.getElementById("paymentMethod2")
-
-    if (!(paymentMethod1.checked == true || paymentMethod2.checked == true)) {
-        alert("Payment Method is required!")
-        return false
-    }
+    var paymentMethod = document.getElementById("paymentMethod")
 
     // get all input
     var finalOutput = "";
@@ -95,15 +86,9 @@ function validation() {
         "訂單者: " + name.value + "\n\t地點: " + place.value;
 
     if (time1.checked) {
-        finalOutput += "\n\t時間: " + time1.value;
-    } else if (time2.checked) {
         finalOutput += "\n\t時間: " + time2.value;
     } else if (time3.checked) {
-        finalOutput += "\n\t時間: " + time3.value;
-    } else if (time4.checked) {
-        finalOutput += "\n\t時間: " + time4.value;
-    } else if (time5.checked) {
-        finalOutput += "\n\t時間: " + time6.value;
+        finalOutput += "\n\t時間: " + time4.value + "\n\t運費: RM 3";
     }
 
     var totalPrice = 0;
@@ -552,14 +537,15 @@ function validation() {
         finalOutput += "\n\t\t" + redTS.value + "x" + redTSQ.value + "\t" + price;
     }
 
-    finalOutput += "\n\t\t\tRM " + parseFloat(totalPrice).toFixed(2);
-
-    if (paymentMethod1.checked) {
-        finalOutput += "\t" + paymentMethod1.value;
-    } else if (paymentMethod2.checked) {
-        finalOutput += "\t" + paymentMethod2.value;
+    if (time3.value != '') {
+        totalPrice += 3;
     }
 
+    finalOutput += "\n\t\t\tRM " + parseFloat(totalPrice).toFixed(2);
+
+    finalOutput += "\t" + paymentMethod.value;
+
+    console.log(finalOutput);
     copy(finalOutput)
 }
 
@@ -572,9 +558,9 @@ function copy(finalOutput) {
 }
 
 function disableTextField() {
-    document.getElementById('time6').disabled = true
+    document.getElementById('time4').disabled = true
 }
 
 function enableTextField() {
-    document.getElementById('time6').disabled = false
+    document.getElementById('time4').disabled = false
 }
