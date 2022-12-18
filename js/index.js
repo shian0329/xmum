@@ -545,7 +545,6 @@ function validation() {
 
     finalOutput += "\t" + paymentMethod.value;
 
-    console.log(finalOutput);
     copy(finalOutput)
 }
 
