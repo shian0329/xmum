@@ -473,8 +473,8 @@ function validation() {
     }
     if (scallopB.checked && scallopBQ.value != "" && scallopBQ.value != 0
     ) {
-        let word = scallopA.value
-        let amount = scallopAQ.value
+        let word = scallopB.value
+        let amount = scallopBQ.value
         let count = amount
         let discount = 0
 
