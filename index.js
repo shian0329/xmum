@@ -416,6 +416,7 @@ function validation() {
             totalPrice += price;
         }
     }
+
     if (prawnC.checked && prawnCQ.value != "" && prawnCQ.value != 0
     ) {
         let word = prawnC.value
@@ -471,6 +472,7 @@ function validation() {
 
         finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price;
     }
+    
     if (scallopB.checked && scallopBQ.value != "" && scallopBQ.value != 0
     ) {
         let word = scallopB.value
