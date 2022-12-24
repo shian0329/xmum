@@ -472,7 +472,7 @@ function validation() {
 
         finalOutput += "\n\t\t" + word + "x" + amount + "\t" + price;
     }
-    
+
     if (scallopB.checked && scallopBQ.value != "" && scallopBQ.value != 0
     ) {
         let word = scallopB.value
@@ -483,7 +483,7 @@ function validation() {
         if (count >= 10) {
             while (count != 0) {
                 discount = amount;
-                amount = Math.floor(amount / 10);
+                count = Math.floor(count / 10);
                 discount *= 1;
             }
         }
