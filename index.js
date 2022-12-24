@@ -482,7 +482,7 @@ function validation() {
 
         if (count >= 10) {
             while (count != 0) {
-                discount = amount;
+                discount = count;
                 count = Math.floor(count / 10);
                 discount *= 1;
             }
